@@ -7,6 +7,46 @@
         <div id="sidebar-menu">
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
+
+                <li class="menu-title" key="t-pages">Páginas</li>
+                <li>
+                    <a href="{{ route('banks.index') }}" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Bancos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Tarjetas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Prestamos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Nominas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect">
+                        <i class="bx bxs-bank"></i>
+                        <span key="t-chat">Transferencias</span>
+                    </a>
+                </li>
+
+                
                 <li class="menu-title" key="t-menu">@lang('translation.Menu')</li>
 
                 <li>
