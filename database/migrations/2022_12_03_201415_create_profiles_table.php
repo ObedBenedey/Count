@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('phone_number');
-            $table->int('age');
-            $table->int('gender');
+            $table->integer('age');
+            $table->integer('gender');
             $table->text('address');
             $table->string('buro');
             $table->string('curp');
