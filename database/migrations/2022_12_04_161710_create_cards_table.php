@@ -22,7 +22,12 @@ return new class extends Migration
             $table->decimal('amount', 2); 
             $table->decimal('minimum', 2); 
             $table->date('cutting_tip');
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('profile_id')->references('id')->on('profiles');
+            $table->foreign('bank_id')->references('id')->on('banks');
         });
     }
 
