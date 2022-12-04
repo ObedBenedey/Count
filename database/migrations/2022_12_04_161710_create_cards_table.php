@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_profile_bank', function (Blueprint $table) {
+        Schema::create('cards', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('profile_id');
+            $table->unsignedBigInteger('bank_id');
+            $table->string('type');
+            $table->date('interest_day'); 
+            $table->decimal('amount', 2); 
+            $table->decimal('minimum', 2); 
+            $table->date('cutting_tip');
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_profile_bank');
+        Schema::dropIfExists('cards');
     }
 };

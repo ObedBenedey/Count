@@ -13,9 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payroll', function (Blueprint $table) {
+        Schema::create('payrolls', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('profile_id');
+            $table->date('day');
+            $table->decimal('amount', 2); 
+            $table->decimal('domiciled', 2); 
+            $table->decimal('debt', 2);
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('profile_id')->references('id')->on('profiles');
         });
     }
 
@@ -26,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payroll');
+        Schema::dropIfExists('payrolls');
     }
 };

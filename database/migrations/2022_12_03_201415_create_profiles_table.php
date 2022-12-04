@@ -15,7 +15,23 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('phone_number');
+            $table->int('age');
+            $table->int('gender');
+            $table->text('address');
+            $table->string('buro');
+            $table->string('curp');
+            $table->string('rfc');
+            $table->boolean('does_invoice');
+            $table->string('occupation');
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_wire_transfers', function (Blueprint $table) {
+        Schema::create('wire_transfers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('profile_id');
+            $table->decimal('amount', 2);
+            $table->date('day'); 
+            $table->string('bill'); 
+            $table->string('concept'); 
+            $table->string('spei');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_wire_transfers');
+        Schema::dropIfExists('wire_transfers');
     }
 };
