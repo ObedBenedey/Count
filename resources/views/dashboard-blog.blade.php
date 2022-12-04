@@ -159,21 +159,6 @@
 
 
                         <hr>
-
-                        <div class="row">
-                            <div class="col-4">
-                                <div>
-                                    <p class="text-muted text-truncate mb-2">Total Post</p>
-                                    <h5 class="mb-0">32</h5>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div>
-                                    <p class="text-muted text-truncate mb-2">Subscribes</p>
-                                    <h5 class="mb-0">10k</h5>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
