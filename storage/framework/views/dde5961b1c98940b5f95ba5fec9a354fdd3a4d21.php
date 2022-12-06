@@ -13,7 +13,8 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                <button  style="float: right;" type="button" class="btn btn-secondary waves-effect waves-light">Agregar Usario</button>
+              
+                <a href="<?php echo e(route('profile.create')); ?>"style="float: right;" type="button" class="btn btn-secondary waves-effect waves-light">Agregar Usario</a>
                     <h4 class="card-title">Tabla de Ususarios</h4>
                     <p class="card-title-desc">En la siguiente tabla se encuentra los usuarios
                     </p>

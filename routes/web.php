@@ -25,7 +25,10 @@ Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class,
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
 Route::get('/banks', [BankController::class, 'index'])->name('banks.index');
+//profile
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+Route::get('/profileCreate', [ProfileController::class, 'create'])->name('profile.create');
+
 
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 

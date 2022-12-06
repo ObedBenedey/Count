@@ -10,4 +10,8 @@ class ProfileController extends Controller{
 
         return view('profile.index', ["profile" => $profile]);
     }
+
+    public function create() {
+        return view('profile.create');
+    }
 }
