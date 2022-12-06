@@ -1,21 +1,21 @@
-@extends('layouts.master')
 
-@section('title') Bancos @endsection
 
-@section('content')
+<?php $__env->startSection('title'); ?> Profile <?php $__env->stopSection(); ?>
 
-    @component('components.breadcrumb')
-        @slot('li_1') Submenu @endslot
-        @slot('title') Bancos @endslot
-    @endcomponent
+<?php $__env->startSection('content'); ?>
+
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('li_1'); ?> Submenu <?php $__env->endSlot(); ?>
+        <?php $__env->slot('title'); ?> Usuarios <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
         <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-
-                    <h4 class="card-title">Table Edits</h4>
-                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.
+                <button  style="float: right;" type="button" class="btn btn-secondary waves-effect waves-light">Agregar Usario</button>
+                    <h4 class="card-title">Tabla de Ususarios</h4>
+                    <p class="card-title-desc">En la siguiente tabla se encuentra los usuarios
                     </p>
 
                     <div class="table-responsive">
@@ -23,10 +23,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Age</th>
-                                    <th>Gender</th>
-                                    <th>Edit</th>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Genero</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,4 +94,12 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+    <!-- Table Editable plugin -->
+    <script src="<?php echo e(URL::asset('/assets/libs/table-edits/table-edits.min.js')); ?>"></script>
+
+    <script src="<?php echo e(URL::asset('/assets/js/pages/table-editable.int.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\obedadmin\source\laravel\Count\resources\views/profile/index.blade.php ENDPATH**/ ?>

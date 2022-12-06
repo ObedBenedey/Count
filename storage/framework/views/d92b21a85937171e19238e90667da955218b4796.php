@@ -1,15 +1,15 @@
-@extends('layouts.master')
 
-@section('title') Bancos @endsection
 
-@section('content')
+<?php $__env->startSection('title'); ?> <?php echo app('translator')->get('translation.Editable_Table'); ?> <?php $__env->stopSection(); ?>
 
-    @component('components.breadcrumb')
-        @slot('li_1') Submenu @endslot
-        @slot('title') Bancos @endslot
-    @endcomponent
+<?php $__env->startSection('content'); ?>
 
-        <div class="row">
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('li_1'); ?> Tables <?php $__env->endSlot(); ?>
+        <?php $__env->slot('title'); ?> Editable Table <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
+
+    <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
@@ -94,4 +94,12 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+    <!-- Table Editable plugin -->
+    <script src="<?php echo e(URL::asset('/assets/libs/table-edits/table-edits.min.js')); ?>"></script>
+
+    <script src="<?php echo e(URL::asset('/assets/js/pages/table-editable.int.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\obedadmin\source\laravel\Count\resources\views/tables-editable.blade.php ENDPATH**/ ?>

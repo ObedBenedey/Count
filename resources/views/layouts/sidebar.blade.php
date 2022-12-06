@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a  href="{{ route('profile.index') }}" class="waves-effect">
                         <i class="bx bxs-bank"></i>
                         <span key="t-chat">Usuarios</span>
                     </a>

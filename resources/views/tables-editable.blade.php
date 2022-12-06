@@ -15,7 +15,7 @@
                 <div class="card-body">
 
                     <h4 class="card-title">Table Edits</h4>
-                    <p class="card-title-desc">Table Edits is a lightweight jQuery plugin for making table rows editable.
+                    <p class="card-title-desc">En la siguiente tabla se encuentra los usuarios
                     </p>
 
                     <div class="table-responsive">
