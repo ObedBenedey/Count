@@ -28,6 +28,7 @@ Route::get('/banks', [BankController::class, 'index'])->name('banks.index');
 //profile
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 Route::get('/profileCreate', [ProfileController::class, 'create'])->name('profile.create');
+Route::post('/data', [ProfileController::class, 'data'])->name('profile.data');
 
 
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
