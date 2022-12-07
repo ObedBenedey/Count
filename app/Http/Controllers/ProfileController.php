@@ -16,7 +16,7 @@ class ProfileController extends Controller{
         return view('profile.create');
     }
     public function data(Request $request) {
-        Log::debug($request);
+        Log::debug("w");
         $profile = new Profile();
             $data = $this->validate($request, [
                 'first_name'=>'required',

@@ -12,7 +12,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-            <form method="post" action="<?php echo e(route('profile.data')); ?>">
+            <form class="form-horizontal" method="POST" action="<?php echo e(route('profile.data')); ?>">
                 <h4 class="card-title">Datos Generales del prestamista</h4>
                 <p class="card-title-desc">Ingresa tus datos para continuar</p>
                 <div class="mb-3 row">
