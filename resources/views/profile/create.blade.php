@@ -13,6 +13,7 @@
         <div class="card">
             <div class="card-body">
             <form class="form-horizontal" method="POST" action="{{ route('profile.data') }}">
+            @csrf
                 <h4 class="card-title">Datos Generales del prestamista</h4>
                 <p class="card-title-desc">Ingresa tus datos para continuar</p>
                 <div class="mb-3 row">
@@ -62,6 +63,12 @@
                     <label for="rfc" class="col-md-2 col-form-label">RFC</label>
                     <div class="col-md-10">
                         <input class="form-control" name="rfc" type="search" value="" id="example-search-input">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="curp" class="col-md-2 col-form-label">curp</label>
+                    <div class="col-md-10">
+                        <input class="form-control" name="curp" type="search" value="" id="example-search-input">
                     </div>
                 </div>
                 <div class="mb-3 row">

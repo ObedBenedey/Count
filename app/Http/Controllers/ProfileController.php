@@ -15,24 +15,28 @@ class ProfileController extends Controller{
     public function create() {
         return view('profile.create');
     }
-    public function data(Request $request) {
-        Log::debug("w");
-        $profile = new Profile();
-            $data = $this->validate($request, [
-                'first_name'=>'required',
-                'last_name'=> 'required',
-                'phone_number'=> 'required',
-                'age'=> 'required',
-                'gender'=> 'required',
-                'address'=> 'required',
-                'buro'=> 'required',
-                'curp'=> 'required',
-                'rfc'=> 'required',
-                'does_invoice'=> 'required',
-                'occupation'=> 'required'
-            ]);
-    
-            $profile->saveProfile($data);
-            return redirect('/profile')->with('success', 'Nuevo menu creado!');
-      }
+    public function data(Request $request) { 
+        try {
+                $profile = new Profile();
+                    $data = $this->validate($request, [
+                        'first_name'=>'required',
+                        'last_name'=> 'required',
+                        'phone_number'=> 'required',
+                        'age'=> 'required',
+                        'gender'=> 'required',
+                        'address'=> 'required',
+                        'buro'=> 'required',
+                        'curp'=> 'required',
+                        'rfc'=> 'required',
+                        'does_invoice'=> 'required',
+                        'occupation'=> 'required'
+                    ]);
+            
+                    $profile->saveProfile($data);
+                    Log::debug($data);
+                    return redirect('/profile')->with('success', 'Nuevo menu creado!');
+        } catch(\Throwable $th) {
+        Log::debug($th->getMessage());
+        } 
+              }
 }

@@ -25,67 +25,24 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Edad</th>
-                                    <th>Genero</th>
-                                    <th>Editar</th>
+                                    <th>Apellido</th>
+                                    <th>Telefono</th>
+                                    <th>Record</th>
+                                    <th>fecha de ingreso</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-id="1">
-                                    <td data-field="id" style="width: 80px">1</td>
-                                    <td data-field="name">David McHenry</td>
-                                    <td data-field="age">24</td>
-                                    <td data-field="gender">Male</td>
-                                    <td style="width: 100px">
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr data-id="2">
-                                    <td data-field="id">2</td>
-                                    <td data-field="name">Frank Kirk</td>
-                                    <td data-field="age">22</td>
-                                    <td data-field="gender">Male</td>
-                                    <td>
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr data-id="3">
-                                    <td data-field="id">3</td>
-                                    <td data-field="name">Rafael Morales</td>
-                                    <td data-field="age">26</td>
-                                    <td data-field="gender">Male</td>
-                                    <td>
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr data-id="4">
-                                    <td data-field="id">4</td>
-                                    <td data-field="name">Mark Ellison</td>
-                                    <td data-field="age">32</td>
-                                    <td data-field="gender">Male</td>
-                                    <td>
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr data-id="5">
-                                    <td data-field="id">5</td>
-                                    <td data-field="name">Minnie Walter</td>
-                                    <td data-field="age">27</td>
-                                    <td data-field="gender">Female</td>
-                                    <td>
-                                        <a class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                                            <i class="fas fa-pencil-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+        @foreach($profile as $profiles)
+            <tr>
+                <td>{{$profiles->id}}</td>
+                <td>{{$profiles->first_name}}</td>
+                <td>{{$profiles->last_name}}</td>
+                <td>{{$profiles->phone_number}}</td>
+                <td>{{$profiles->buro}}</td>
+                <td>{{$profiles->updated_at}}</td>
+       
+            </tr>
+        @endforeach
                             </tbody>
                         </table>
                     </div>
