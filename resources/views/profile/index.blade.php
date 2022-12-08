@@ -29,6 +29,8 @@
                                     <th>Telefono</th>
                                     <th>Record</th>
                                     <th>fecha de ingreso</th>
+                                    <th>Editar</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,6 +42,7 @@
                 <td>{{$profiles->phone_number}}</td>
                 <td>{{$profiles->buro}}</td>
                 <td>{{$profiles->updated_at}}</td>
+                <td><a href="{{ route('profile.edit',$profiles->id) }}" style="float: right;" type="button" class="btn btn-secondary waves-effect waves-light">Editar</a></td>
        
             </tr>
         @endforeach
@@ -52,10 +55,4 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-@endsection
-@section('script')
-    <!-- Table Editable plugin -->
-    <script src="{{ URL::asset('/assets/libs/table-edits/table-edits.min.js') }}"></script>
-
-    <script src="{{ URL::asset('/assets/js/pages/table-editable.int.js') }}"></script>
 @endsection

@@ -15,6 +15,14 @@ class ProfileController extends Controller{
     public function create() {
         return view('profile.create');
     }
+
+    public function edit($id) {
+    
+        $profile = Profile::where('id', $id)->first();
+        // dd("ajdsa");
+      return view('profile.edit', ["profile" => $profile]);
+    }
+
     public function data(Request $request) { 
         try {
                 $profile = new Profile();

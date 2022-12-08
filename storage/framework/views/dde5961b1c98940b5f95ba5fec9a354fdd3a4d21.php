@@ -29,6 +29,8 @@
                                     <th>Telefono</th>
                                     <th>Record</th>
                                     <th>fecha de ingreso</th>
+                                    <th>Editar</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,6 +42,7 @@
                 <td><?php echo e($profiles->phone_number); ?></td>
                 <td><?php echo e($profiles->buro); ?></td>
                 <td><?php echo e($profiles->updated_at); ?></td>
+                <td><a href="<?php echo e(route('profile.edit',$profiles->id)); ?>" style="float: right;" type="button" class="btn btn-secondary waves-effect waves-light">Editar</a></td>
        
             </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -52,12 +55,6 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-<?php $__env->stopSection(); ?>
-<?php $__env->startSection('script'); ?>
-    <!-- Table Editable plugin -->
-    <script src="<?php echo e(URL::asset('/assets/libs/table-edits/table-edits.min.js')); ?>"></script>
-
-    <script src="<?php echo e(URL::asset('/assets/js/pages/table-editable.int.js')); ?>"></script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\obedadmin\source\laravel\Count\resources\views/profile/index.blade.php ENDPATH**/ ?>
